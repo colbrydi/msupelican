@@ -11,7 +11,7 @@ If the above doesn't work it probably means you don't have make installed.  You 
 
 ``` pelican content ```
 
-``` cd output && python -m pelican.server ```
+``` cd docs && python -m pelican.server ```
 
 To connect to the local site you can use the following URL:
 

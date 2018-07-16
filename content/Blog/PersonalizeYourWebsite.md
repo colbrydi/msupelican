@@ -15,4 +15,4 @@ make html
 make serve
 ```
 
-Once you are happy with the changes copy the contents of output to your user.github.io repository and push your changes to github.
+Once you are happy with the changes copy the contents of the ```docs``` directory to your user.github.io repository and push your changes to github.

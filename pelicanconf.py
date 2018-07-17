@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'authorname'
 SITENAME = "CMSE Pelican/Github.io tutorial"
-SITEURL = '.'
+SITEURL = '//colbrydi.github.io/msupelican'
 PATH = 'content'
 INDEX_SAVE_AS = 'Blog.html'
 
@@ -38,7 +38,7 @@ LINKS = (('CMSE', '//cmse.msu.edu'),
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = False 
 
 # Comment following line if you want the default theme
 THEME = 'themes/tuxlite2'
@@ -51,6 +51,6 @@ DISPLAY_CATEGORIES_ON_MENU = True
 #PAGE_URL = 'about2.html'
 
 # Provides menu items, which come before pages / categories
-MENUITEMS = [('Blog','/Blog.html'), ('About', '/pages/about.html')]
+MENUITEMS = [('Blog',SITEURL+'/Blog.html'), ('About',SITEURL+'/pages/about.html')]
 
 

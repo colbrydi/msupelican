@@ -14,7 +14,7 @@ INDEX_SAVE_AS = 'Blog.html'
 
 #PLUGIN_PATHS=["./plugins"]
 #PLUGINS=['ipynb.markup']
-MARKUP = { 'md', 'ipynb'}
+MARKUP = { 'md', 'ipynb', 'html'}
 
 TIMEZONE = 'America/Detroit'
 

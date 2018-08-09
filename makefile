@@ -42,6 +42,7 @@ help:
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
 	@echo '   make html                           (re)generate the web site          '
+	@echo '   make bib                            (re)generate publications (beta)   '
 	@echo '   make clean                          remove the generated files         '
 	@echo '   make regenerate                     regenerate files upon modification '
 	@echo '   make publish                        generate using production settings '
@@ -60,6 +61,13 @@ help:
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
+
+
+bib:
+	#Use to fix bibtex2html not hadling month outputs correctly from zotero
+	cd bibtex2html && grep -v -e "month =" publications.bib > temp.bib
+	cd bibtex2html && mv temp.bib publications.bib
+	cd bibtex2html && python bibtex2html.py publications.bib template.html $(INPUTDIR)/pages/publications.html
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
